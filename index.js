@@ -8,8 +8,7 @@ const cors = require("cors");
 
 app.use(cors());
 app.use(express.json());
-// ${process.env.DB_USER}:${process.env.DB_PASS}
-// const uri = `mongodb+srv://jobbox:GCDMXDHpr7ekXifv@cluster0.p9o5exx.mongodb.net/?retryWrites=true&w=majority`;
+
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.p9o5exx.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
